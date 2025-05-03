@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { jsPDF } from "jspdf";
 import Summary from './components/Summary.vue';
 import Experience from './components/Experience.vue';
 import Education from './components/Education.vue';
 
+const { t } = useI18n();
 const container = ref(null);
 
 const generatePDF = async () => {
@@ -41,8 +43,8 @@ const generatePDF = async () => {
 <template>
   <div class="container" ref="container">
     <header>
-      <h1>Dmitrii Leshchenko</h1>
-      <p>.NET Senior Software Developer | France</p>
+      <h1>{{ t('header.name') }}</h1>
+      <p>{{ t('header.title') }}</p>
     </header>
 
     <button @click="generatePDF">Generate PDF</button>

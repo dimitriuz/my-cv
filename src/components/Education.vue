@@ -1,15 +1,17 @@
 <template>
   <section class="section">
-    <h2>Education</h2>
-    <h3>Moscow University for Industry and Finance</h3>
-    <p>Bachelor of IT and Systems, Information Technology · (2014 - 2016)</p>
+    <h2>{{ t('education.title') }}</h2>
+    <div v-for="(school, index) in tm('education.schools')" :key="index">
+      <h3>{{ school.name }}</h3>
+      <p>{{ school.degree }} · ({{ school.period }})</p>
+    </div>
   </section>
 </template>
 
-<script>
-export default {
-  name: 'Education'
-}
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t,tm } = useI18n()
 </script>
 
 <style scoped>

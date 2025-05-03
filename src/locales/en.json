@@ -1,0 +1,109 @@
+{
+  "header": {
+    "name": "Dmitrii Leshchenko",
+    "title": ".NET Senior Software Developer | France"
+  },
+  "summary": {
+    "title": "Summary",
+    "intro": "Introduced to computers since the age of 7 and in the profession for over 15 years. Participated in many projects, in roles from developer to architect & technical leader. I can understand business goals, translate goals into technical requirements, develop solution architecture, write code and deploy the finished solution in a productive environment. I like to do research tasks and propose the best solution given the constraints. I have expertise in software solutions from microservices to enterprise level ERP, CRM, MES solutions. Gained extensive experience in integration solutions using various technologies.",
+    "skillsTitle": "My main skills are:",
+    "skills": [
+      "Tech architecture: Systems Design / Problem-Solving / Project Management / Technical Proficiency",
+      ".NET: C# / WPF / Avalonia UI / EF / ASP.NET Core / Serilog / Autofac / Mediatr",
+      "DB: MS SQL / PostgreSQL / MariaDB / MongoDB",
+      "Integrations: JSON / XML / SOAP / REST / gRPC/ RabbitMQ / Robot framework",
+      "DevOps: Docker / k8s / Linux / Gitlab CI / CD / Proxmox / Nginx",
+      "Tests: Unit, Integration, E2E, xUnit, Moq",
+      "3rd party apps research and reverse engineering",
+      "Tools: Git / Jira / Confluence / Grafana"
+    ]
+  },
+"education": {
+    "title": "Education",
+    "schools": [
+      {
+        "name": "Moscow University for Industry and Finance",
+        "degree": "Bachelor of IT and Systems, Information Technology",
+        "period": "2014 - 2016"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "jobs": [
+      {
+        "company": "Diagnocat",
+        "title": ".NET Senior Software Developer",
+        "period": "June 2023 - Present",
+        "location": "United States (remote)",
+        "description": "Responsible for the architecture and development of the desktop application for an AI-powered cloud medical platform.",
+        "responsibilities": [
+          {
+            "title": "Development of a modern multi-platform desktop application based on .NET 8 Avalonia UI:",
+            "details": [
+              "high-speed multithreaded processing and uploading of 2d/3d images",
+              "architecture and development of plug-ins for third-party medical software (both official and unsupported)",
+              "logging, metrics, configuration management modules",
+              "application installation and update module",
+              "completely rewritten application from monolithic to client-server architecture, using gRPC",
+              "performance analyze and troubleshooting",
+              "writing unit and integration tests using xUnit and Moq"
+            ]
+          },
+          "Designed the architecture and developed a new application for appointment recording and integration with third-party applications. (.NET 8 Avalonia UI)",
+          "Architecture and development of the companion web app for a core application, based on .NET 8 ASP.NET Core Mongo",
+          "Analyze, reverse-engineer, integrate with third-party applications and services using Robot Processing Automation (RPA Framework), DBs, REST, etc.",
+          "CICD GitLab processes tuning and maintenance",
+          "Code reviews, developers mentorship, job interviews",
+          "Tech stack summary: .NET 7/8, Avalonia UI, xUnit, Moq, Autofac, Serilog, MediatR, Dapper, DynamicData, Fluent*, fo-dicom, gRPC, Hangfire, LiteDB, SqLite, EF, Onnx, NAPS2, ImageSharp, CommunityToolkit.Mvvm, NAudio, Velopack, AspNetCore, MongoDb"
+        ]
+      },
+      {
+        "company": "FirstBIT",
+        "title": "Senior Software Developer / Team lead",
+        "period": "November 2019 - June 2023",
+        "location": "Russia",
+        "description": "Responsible for the architecture and development of the desktop application for an AI-powered cloud medical platform.",
+        "responsibilities": [
+          "Participate in projects as a lead developer, technical architect, team lead (3 to 17 team members), performance expert.",
+          "Build apps architecture and develop most-critical parts of apps",
+          "Develop web services and integration (using REST, SOAP, oData, SQL, RabbitMQ, XML, JSON) between apps (1C, SAP, DAX)",
+          "Solving SQL performance problems"
+        ]
+      },
+      {
+        "company": "Self-employed",
+        "title": "Software Development Engineer",
+        "period": "November 2016 - November 2019",
+        "location": "Russia",
+        "description": "Responsible for the architecture and development of the varios software (desktop, web) and integration solutions.",
+        "responsibilities": [
+          "Develop integration between Sharepoint, Project Server and 1C (C#)",
+          "Develop custom ERP for an oil service company (1C)",
+          "Develop web ERP for a manufacturing company (1C)"
+        ]
+      },
+      {
+        "company": "SPF Paker LLC",
+        "title": "Team lead, Senior Software Development Engineer",
+        "period": "2008 - 2016",
+        "location": "Russia",
+        "description": "Responsible for ERP-class corporate software (implementation, development, integrations, stability)",
+        "responsibilities": [
+          "Responsible for ERP-class corporate software (implementation, development, integrations, stability)",
+          "Software integration (ACMS, CAD, MES, vending machines, dashboards, telegram bots)"
+        ]
+      },
+      {
+        "company": "FinInvest Service",
+        "title": "Software Development Engineer",
+        "period": "2007 - 2008",
+        "location": "Russia",
+        "description": "Technical support and development for the 1C development platform",
+        "responsibilities": [
+          "Technical support and development for the 1C development platform"
+        ]
+      }
+    ]
+  }
+}

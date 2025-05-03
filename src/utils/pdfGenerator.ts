@@ -1,6 +1,5 @@
 import { jsPDF } from "jspdf";
 import type { Composer } from 'vue-i18n'
-import { icons, addIconToPdf } from './icons'
 
 interface PDFGeneratorOptions {
     margin: number;
@@ -60,11 +59,11 @@ export class PDFGenerator {
         this.pdf.setFontSize(12);
         this.pdf.setFont("helvetica", "bold");
         this.pdf.text(title, this.options.margin, this.leftY);
-        this.leftY += 5;
+        this.leftY += 7; // Increased from 5
         this.pdf.setLineWidth(0.2);
         this.pdf.setDrawColor(86, 156, 214); // #569CD6
         this.pdf.line(this.options.margin, this.leftY, this.options.margin + this.options.leftColumnWidth, this.leftY);
-        this.leftY += 5;
+        this.leftY += 7; // Increased from 5
         this.pdf.setFontSize(9);
         this.pdf.setFont("helvetica", "normal");
         contentFn();
@@ -92,7 +91,7 @@ export class PDFGenerator {
                 this.leftY = this.options.margin;
             }
             this.pdf.text(line, this.options.margin + indent, this.leftY);
-            this.leftY += 4;
+            this.leftY += 6; // Increased from 4
         });
     }
 
@@ -115,8 +114,6 @@ export class PDFGenerator {
         // Left column content
         this.addLeftSection(this.i18n.t('contact.title'), () => {
             this.i18n.tm('contact.items').forEach(item => {
-                const iconY = this.leftY - 3;
-                addIconToPdf(this.pdf, item.type, this.options.margin, iconY);
                 
                 this.pdf.setFont("helvetica", "bold");
                 this.pdf.setTextColor(156, 220, 254); // #9CDCFE
@@ -126,13 +123,14 @@ export class PDFGenerator {
                 this.pdf.setTextColor(212, 212, 212); // #D4D4D4
                 this.addLeftColumnText(item.value, 6);
             });
-            this.leftY += 3;
+            this.leftY += 5; // Increased from 3
         });
 
         this.addLeftSection(this.i18n.t('summary.skillsTitle'), () => {
             this.i18n.tm('summary.skills').forEach(skill => {
                 this.addLeftColumnText(`• ${skill}`, 3);
             });
+            this.leftY += 5; // Increased from 3
         });
 
         this.addLeftSection(this.i18n.t('education.title'), () => {
@@ -142,7 +140,7 @@ export class PDFGenerator {
                 this.pdf.setFont("helvetica", "normal");
                 this.addLeftColumnText(`${school.degree}`);
                 this.addLeftColumnText(`(${school.period})`);
-                this.leftY += 2;
+                this.leftY += 3; // Increased from 2
             });
         });
 

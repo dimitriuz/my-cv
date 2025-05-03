@@ -16,7 +16,8 @@ const { t,tm } = useI18n()
 
 <style scoped>
 .section {
-  margin-bottom: 30px;
+  text-align: left;
+  margin-bottom: 3px;
 }
 
 .section h2 {

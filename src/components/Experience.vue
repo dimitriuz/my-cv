@@ -42,7 +42,7 @@ const { t, tm } = useI18n()
 <style scoped>
 .section {
   text-align: justify;
-  margin-bottom: 30px;
+  margin-bottom: 3px;
 }
 
 .job-header {

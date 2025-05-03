@@ -6,7 +6,7 @@
   "summary": {
     "title": "Summary",
     "intro": "Senior .NET Software Developer with over 15 years of experience designing, architecting, and delivering complex software solutions across desktop, web, and cloud platforms. Proven expertise in translating business requirements into scalable architectures, leading development teams, and driving technical excellence in AI-powered medical platforms, enterprise ERP, CRM, and integration systems. Skilled in modern .NET technologies, microservices, and high-performance multithreaded applications. Adept at mentoring teams, optimizing CI/CD pipelines, and conducting thorough code reviews. Passionate about research-driven problem solving and continuous learning to deliver robust, maintainable, and efficient software.",
-    "skillsTitle": "My main skills are:",
+    "skillsTitle": "Skills",
     "skills": [
       "Technical Leadership & Architecture: System Design / Problem Solving / Project Management / Technical Expertise",
       ".NET: C# / WPF / Avalonia UI / Entity Framework / ASP.NET Core / Serilog / Autofac / MediatR",
@@ -23,7 +23,7 @@
     "schools": [
       {
         "name": "Moscow University for Industry and Finance",
-        "degree": "Bachelor in Information Technology",
+        "degree": "Bachelor @ Information Technology",
         "period": "2014 - 2016"
       }
     ]

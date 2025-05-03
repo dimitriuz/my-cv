@@ -7,11 +7,11 @@ import Education from './components/Education.vue';
 import Contact from './components/Contact.vue';
 import { PDFGenerator } from './utils/pdfGenerator';
 
-const { t, tm } = useI18n();
+const i18n = useI18n();
 const container = ref(null);
 
 const generatePDF = () => {
-    const generator = new PDFGenerator({ t, tm });
+    const generator = new PDFGenerator(i18n);
     generator.generate();
 };
 </script>
@@ -19,8 +19,8 @@ const generatePDF = () => {
 <template>
     <div class="container" ref="container">
         <header>
-            <h1>{{ t('header.name') }}</h1>
-            <p>{{ t('header.title') }}</p>
+            <h1>{{ i18n.t('header.name') }}</h1>
+            <p>{{ i18n.t('header.title') }}</p>
         </header>
 
         <button @click="generatePDF">Download CV</button>

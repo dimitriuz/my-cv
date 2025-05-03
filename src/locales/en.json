@@ -8,14 +8,13 @@
     "intro": "Senior .NET Software Developer with over 15 years of experience designing, architecting, and delivering complex software solutions across desktop, web, and cloud platforms. Proven expertise in translating business requirements into scalable architectures, leading development teams, and driving technical excellence in AI-powered medical platforms, enterprise ERP, CRM, and integration systems. Skilled in modern .NET technologies, microservices, and high-performance multithreaded applications. Adept at mentoring teams, optimizing CI/CD pipelines, and conducting thorough code reviews. Passionate about research-driven problem solving and continuous learning to deliver robust, maintainable, and efficient software.",
     "skillsTitle": "Skills",
     "skills": [
-      "Technical Leadership & Architecture: System Design / Problem Solving / Project Management / Technical Expertise",
+      "Technical Leadership & Architecture: System Design / Problem Solving / Project Management / Technical Expertise / Reverse Engineering",
       ".NET: C# / WPF / Avalonia UI / Entity Framework / ASP.NET Core / Serilog / Autofac / MediatR",
       "Frontend: TypeScript / Vue.js / Nuxt.js / Tailwind CSS / PrimeVue",
       "Databases: MS SQL / PostgreSQL / MariaDB / MongoDB",
       "Integrations: JSON / XML / SOAP / REST / gRPC / RabbitMQ / Robot Framework",
       "DevOps: Docker / Kubernetes (k8s) / Linux / GitLab CI/CD / Proxmox / Nginx",
       "Testing: Unit Testing / Integration Testing / End-to-End (E2E) / xUnit / Moq",
-      "Third-Party Application Research and Reverse Engineering",
       "Tools: Git / Jira / Confluence / Grafana"
     ]
   },

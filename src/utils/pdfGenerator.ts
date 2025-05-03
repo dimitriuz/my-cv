@@ -85,10 +85,10 @@ export class PDFGenerator {
 
     private addLeftColumnText(text: string, indent: number = 0): void {
         const splitText = this.pdf.splitTextToSize(text, this.options.leftColumnWidth - indent);
-        splitText.forEach(line => {
+        splitText.forEach((line: string) => {
             if (this.leftY > this.options.pageHeight - this.options.margin) {
-                this.pdf.addPage();
-                this.leftY = this.options.margin;
+            this.pdf.addPage();
+            this.leftY = this.options.margin;
             }
             this.pdf.text(line, this.options.margin + indent, this.leftY);
             this.leftY += 6; // Increased from 4
@@ -98,7 +98,7 @@ export class PDFGenerator {
     private addRightColumnText(text: string, indent: number = 0): void {
         const startX = this.options.margin * 2 + this.options.leftColumnWidth;
         const splitText = this.pdf.splitTextToSize(text, this.rightColumnWidth - indent);
-        splitText.forEach(line => {
+        splitText.forEach((line: string) => {
             if (this.rightY > this.options.pageHeight - this.options.margin) {
                 this.pdf.addPage();
                 this.rightY = this.options.margin;
@@ -113,7 +113,7 @@ export class PDFGenerator {
 
         // Left column content
         this.addLeftSection(this.i18n.t('contact.title'), () => {
-            this.i18n.tm('contact.items').forEach(item => {
+            (this.i18n.tm('contact.items') as Array<{ label: string; value: string }>).forEach(item => {
                 
                 this.pdf.setFont("helvetica", "bold");
                 this.pdf.setTextColor(156, 220, 254); // #9CDCFE
@@ -127,14 +127,14 @@ export class PDFGenerator {
         });
 
         this.addLeftSection(this.i18n.t('summary.skillsTitle'), () => {
-            this.i18n.tm('summary.skills').forEach(skill => {
+            (this.i18n.tm('summary.skills') as string[]).forEach((skill: string) => {
                 this.addLeftColumnText(`• ${skill}`, 3);
             });
             this.leftY += 5; // Increased from 3
         });
 
         this.addLeftSection(this.i18n.t('education.title'), () => {
-            this.i18n.tm('education.schools').forEach(school => {
+            (this.i18n.tm('education.schools') as Array<{ name: string; degree: string; period: string }>).forEach((school: { name: string; degree: string; period: string }) => {
                 this.pdf.setFont("helvetica", "bold");
                 this.addLeftColumnText(school.name);
                 this.pdf.setFont("helvetica", "normal");
@@ -146,7 +146,14 @@ export class PDFGenerator {
 
         // Right column content
         this.addRightSection(this.i18n.t('experience.title'), () => {
-            this.i18n.tm('experience.jobs').forEach(job => {
+            (this.i18n.tm('experience.jobs') as Array<{
+                company: string;
+                period: string;
+                location: string;
+                title: string;
+                description?: string;
+                responsibilities?: Array<string | { title: string; details?: string[] }>;
+            }>).forEach(job => {
                 const startX = this.options.margin * 2 + this.options.leftColumnWidth;
                 
                 this.pdf.setFont("helvetica", "bold");
@@ -170,19 +177,19 @@ export class PDFGenerator {
                     this.rightY += 2;
                 }
                 if (job.responsibilities) {
-                job.responsibilities.forEach(resp => {
-                    if (typeof resp === 'string') {
-                        this.addRightColumnText(`• ${resp}`, 3);
-                    } else {
-                        this.addRightColumnText(`• ${resp.title}`, 3);
-                        // if (resp.details) {
-                        //     resp.details.forEach(detail => {
-                        //         this.addRightColumnText(`  - ${detail}`, 6);
-                        //     });
-                        // }
-                    }
-                });
-            }
+                    job.responsibilities.forEach(resp => {
+                        if (typeof resp === 'string') {
+                            this.addRightColumnText(`• ${resp}`, 3);
+                        } else {
+                            this.addRightColumnText(`• ${resp.title}`, 3);
+                            // if (resp.details) {
+                            //     resp.details.forEach(detail => {
+                            //         this.addRightColumnText(`  - ${detail}`, 6);
+                            //     });
+                            // }
+                        }
+                    });
+                }
                 this.rightY += 4;
             });
         });

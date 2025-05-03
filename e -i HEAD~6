@@ -1,0 +1,6 @@
+[33m03a5677[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Remove .vscode/extensions.json from Git tracking
+[33m711d28c[m refactor: update .gitignore to track .vscode directory instead of files
+[33m05a4052[m refactor: stop tracking .vscode/extensions.json in .gitignore
+[33md807900[m feat: remove VSCode extensions recommendations
+[33ma53d407[m Remove .vscode/extensions.json from Git tracking
+[33m3d75d60[m refactor: remove unused Nix configuration and SVG assets

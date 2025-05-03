@@ -1,58 +1,35 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { jsPDF } from "jspdf";
 import Summary from './components/Summary.vue';
 import Experience from './components/Experience.vue';
 import Education from './components/Education.vue';
+import Contact from './components/Contact.vue';
+import { PDFGenerator } from './utils/pdfGenerator';
 
-const { t } = useI18n();
+const { t, tm } = useI18n();
 const container = ref(null);
 
-const generatePDF = async () => {
-    const pdf = new jsPDF({
-        format: 'a4'
-    });
-    const content = container.value;
-    const a4PageHeight = 277; // 297mm (A4 height) - 20mm (top and bottom margins)
-    const margins = { top: 10, right: 15, bottom: 10, left: 15 };
-
-    if (content) {
-        const scale = 0.25;
-        const margins = { top: 10, right: 10, bottom: 10, left: 10 };
-
-        await pdf.html(content, {
-            html2canvas: { scale: scale },
-            x: margins.left,
-            y: margins.top ,
-            windowWidth: 500,
-            callback: function (pdf) {
-                 // Estimate content height in PDF points (adjust as needed)
-                const contentHeight  = pdf.internal.pageSize.getHeight() * scale; 
-
-                if (contentHeight  > a4PageHeight) {
-                    pdf.addPage(); // Add a blank second page for now
-                }
-                pdf.save('Dmitrii_Leshchenko_CV.pdf');
-            }
-        });
-    }
+const generatePDF = () => {
+    const generator = new PDFGenerator({ t, tm });
+    generator.generate();
 };
 </script>
 
 <template>
-  <div class="container" ref="container">
-    <header>
-      <h1>{{ t('header.name') }}</h1>
-      <p>{{ t('header.title') }}</p>
-    </header>
+    <div class="container" ref="container">
+        <header>
+            <h1>{{ t('header.name') }}</h1>
+            <p>{{ t('header.title') }}</p>
+        </header>
 
-    <button @click="generatePDF">Generate PDF</button>
+        <button @click="generatePDF">Download CV</button>
 
-    <Summary />
-    <Experience />
-    <Education />
-  </div>
+        <Contact />
+        <Summary />
+        <Experience />
+        <Education />
+    </div>
 </template>
 
 <style>
@@ -76,7 +53,9 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #D4D4D4;
     margin-bottom: 20px;
 }
@@ -88,7 +67,7 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
- 
+
 h2 {
     font-weight: 600;
     font-size: 2em;
@@ -141,5 +120,12 @@ li {
 a {
     color: #569CD6;
     text-decoration: none;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    margin-top: 30px;
 }
 </style>

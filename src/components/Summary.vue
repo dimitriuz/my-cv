@@ -3,11 +3,13 @@
     <h2>{{ t('summary.title') }}</h2>
     <p>{{ t('summary.intro') }}</p>
     <p><strong>{{ t('summary.skillsTitle') }}</strong></p>
+    <div class="list-item-container">
     <ul>
-      <li v-for="(skill, index) in skills" :key="index">
+      <li v-for="(skill, index) in tm('summary.skills')" :key="index">
         {{ skill }}
       </li>
     </ul>
+    </div>
   </section>
 </template>
 
@@ -15,12 +17,11 @@
 import { useI18n } from 'vue-i18n'
 
 const { t, tm } = useI18n()
-const skills = tm('summary.skills')
-console.log(skills)
 </script>
 
 <style scoped>
 .section {
+  text-align: justify;
   margin-bottom: 30px;
 }
 

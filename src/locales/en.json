@@ -5,25 +5,25 @@
   },
   "summary": {
     "title": "Summary",
-    "intro": "Introduced to computers since the age of 7 and in the profession for over 15 years. Participated in many projects, in roles from developer to architect & technical leader. I can understand business goals, translate goals into technical requirements, develop solution architecture, write code and deploy the finished solution in a productive environment. I like to do research tasks and propose the best solution given the constraints. I have expertise in software solutions from microservices to enterprise level ERP, CRM, MES solutions. Gained extensive experience in integration solutions using various technologies.",
+    "intro": "Senior .NET Software Developer with over 15 years of experience designing, architecting, and delivering complex software solutions across desktop, web, and cloud platforms. Proven expertise in translating business requirements into scalable architectures, leading development teams, and driving technical excellence in AI-powered medical platforms, enterprise ERP, CRM, and integration systems. Skilled in modern .NET technologies, microservices, and high-performance multithreaded applications. Adept at mentoring teams, optimizing CI/CD pipelines, and conducting thorough code reviews. Passionate about research-driven problem solving and continuous learning to deliver robust, maintainable, and efficient software.",
     "skillsTitle": "My main skills are:",
     "skills": [
-      "Tech architecture: Systems Design / Problem-Solving / Project Management / Technical Proficiency",
-      ".NET: C# / WPF / Avalonia UI / EF / ASP.NET Core / Serilog / Autofac / Mediatr",
-      "DB: MS SQL / PostgreSQL / MariaDB / MongoDB",
-      "Integrations: JSON / XML / SOAP / REST / gRPC/ RabbitMQ / Robot framework",
-      "DevOps: Docker / k8s / Linux / Gitlab CI / CD / Proxmox / Nginx",
-      "Tests: Unit, Integration, E2E, xUnit, Moq",
-      "3rd party apps research and reverse engineering",
+      "Technical Leadership & Architecture: System Design / Problem Solving / Project Management / Technical Expertise",
+      ".NET: C# / WPF / Avalonia UI / Entity Framework / ASP.NET Core / Serilog / Autofac / MediatR",
+      "Databases: MS SQL / PostgreSQL / MariaDB / MongoDB",
+      "Integrations: JSON / XML / SOAP / REST / gRPC / RabbitMQ / Robot Framework",
+      "DevOps: Docker / Kubernetes (k8s) / Linux / GitLab CI/CD / Proxmox / Nginx",
+      "Testing: Unit Testing / Integration Testing / End-to-End (E2E) / xUnit / Moq",
+      "Third-Party Application Research and Reverse Engineering",
       "Tools: Git / Jira / Confluence / Grafana"
     ]
   },
-"education": {
+  "education": {
     "title": "Education",
     "schools": [
       {
         "name": "Moscow University for Industry and Finance",
-        "degree": "Bachelor of IT and Systems, Information Technology",
+        "degree": "Bachelor in Information Technology",
         "period": "2014 - 2016"
       }
     ]
@@ -36,73 +36,95 @@
         "title": ".NET Senior Software Developer",
         "period": "June 2023 - Present",
         "location": "United States (remote)",
-        "description": "Responsible for the architecture and development of the desktop application for an AI-powered cloud medical platform.",
+        "description": "Lead the architecture and development of a modern, multi-platform desktop application for an AI-powered cloud medical platform.",
         "responsibilities": [
           {
-            "title": "Development of a modern multi-platform desktop application based on .NET 8 Avalonia UI:",
+            "title": "Development of a modern multi-platform desktop application based on .NET 8 Avalonia UI",
             "details": [
-              "high-speed multithreaded processing and uploading of 2d/3d images",
-              "architecture and development of plug-ins for third-party medical software (both official and unsupported)",
-              "logging, metrics, configuration management modules",
-              "application installation and update module",
-              "completely rewritten application from monolithic to client-server architecture, using gRPC",
-              "performance analyze and troubleshooting",
-              "writing unit and integration tests using xUnit and Moq"
+              "Implemented high-speed, multithreaded processing and uploading of 2D/3D medical images",
+              "Architected and developed plug-ins for third-party medical software (official and unsupported)",
+              "Built logging, metrics, and configuration management modules",
+              "Developed application installation and update modules",
+              "Re-architected the application from monolithic to client-server architecture using gRPC",
+              "Performed performance analysis and troubleshooting",
+              "Wrote unit and integration tests using xUnit and Moq"
             ]
           },
-          "Designed the architecture and developed a new application for appointment recording and integration with third-party applications. (.NET 8 Avalonia UI)",
-          "Architecture and development of the companion web app for a core application, based on .NET 8 ASP.NET Core Mongo",
-          "Analyze, reverse-engineer, integrate with third-party applications and services using Robot Processing Automation (RPA Framework), DBs, REST, etc.",
-          "CICD GitLab processes tuning and maintenance",
-          "Code reviews, developers mentorship, job interviews",
-          "Tech stack summary: .NET 7/8, Avalonia UI, xUnit, Moq, Autofac, Serilog, MediatR, Dapper, DynamicData, Fluent*, fo-dicom, gRPC, Hangfire, LiteDB, SqLite, EF, Onnx, NAPS2, ImageSharp, CommunityToolkit.Mvvm, NAudio, Velopack, AspNetCore, MongoDb"
+          "Designed and developed a new appointment scheduling application with integration to third-party systems (.NET 8 Avalonia UI)",
+          "Architected and developed a companion web application using .NET 8, ASP.NET Core, and MongoDB",
+          "Analyzed, reverse-engineered, and integrated third-party applications and services using Robot Framework (RPA), databases, REST APIs, and more",
+          "Maintained and optimized CI/CD pipelines using GitLab",
+          "Conducted code reviews, mentored developers, and participated in technical interviews",
+          "Tech stack summary: .NET 7/8, Avalonia UI, xUnit, Moq, Autofac, Serilog, MediatR, Dapper, DynamicData, Fluent*, fo-dicom, gRPC, Hangfire, LiteDB, SQLite, Entity Framework, ONNX, NAPS2, ImageSharp, CommunityToolkit.Mvvm, NAudio, Velopack, ASP.NET Core, MongoDB"
         ]
       },
       {
         "company": "FirstBIT",
-        "title": "Senior Software Developer / Team lead",
+        "title": "Senior Software Developer / Team Lead",
         "period": "November 2019 - June 2023",
         "location": "Russia",
-        "description": "Responsible for the architecture and development of the desktop application for an AI-powered cloud medical platform.",
-        "responsibilities": [
-          "Participate in projects as a lead developer, technical architect, team lead (3 to 17 team members), performance expert.",
-          "Build apps architecture and develop most-critical parts of apps",
-          "Develop web services and integration (using REST, SOAP, oData, SQL, RabbitMQ, XML, JSON) between apps (1C, SAP, DAX)",
-          "Solving SQL performance problems"
-        ]
+        "description": "Led development teams of 3-17 members as technical architect and team lead. Designed and developed scalable application architectures, focusing on performance optimization and timely project delivery. Created enterprise integrations between various systems using REST, SOAP, OData, SQL, RabbitMQ, XML, and JSON, connecting applications like 1C, SAP, and DAX. Specialized in SQL performance optimization and database efficiency improvements."
       },
       {
         "company": "Self-employed",
         "title": "Software Development Engineer",
         "period": "November 2016 - November 2019",
         "location": "Russia",
-        "description": "Responsible for the architecture and development of the varios software (desktop, web) and integration solutions.",
-        "responsibilities": [
-          "Develop integration between Sharepoint, Project Server and 1C (C#)",
-          "Develop custom ERP for an oil service company (1C)",
-          "Develop web ERP for a manufacturing company (1C)"
-        ]
+        "description": "Delivered comprehensive software solutions across multiple domains. Developed complex integrations between SharePoint, Project Server, and 1C enterprise systems. Built custom ERP solutions for oil service and manufacturing companies, implementing industry-specific requirements and optimizing business processes through web-based and desktop applications."
       },
       {
         "company": "SPF Paker LLC",
-        "title": "Team lead, Senior Software Development Engineer",
+        "title": "Team Lead, Senior Software Development Engineer",
         "period": "2008 - 2016",
         "location": "Russia",
-        "description": "Responsible for ERP-class corporate software (implementation, development, integrations, stability)",
-        "responsibilities": [
-          "Responsible for ERP-class corporate software (implementation, development, integrations, stability)",
-          "Software integration (ACMS, CAD, MES, vending machines, dashboards, telegram bots)"
-        ]
+        "description": "Managed full lifecycle of ERP-class corporate software implementation and development. Successfully integrated diverse systems including ACMS, CAD, MES, vending machines, dashboards, and Telegram bots to create a unified enterprise ecosystem. Led development teams and maintained system stability while implementing continuous improvements and optimizations."
       },
       {
         "company": "FinInvest Service",
         "title": "Software Development Engineer",
         "period": "2007 - 2008",
         "location": "Russia",
-        "description": "Technical support and development for the 1C development platform",
-        "responsibilities": [
-          "Technical support and development for the 1C development platform"
-        ]
+        "description": "Specialized in 1C:Enterprise platform development and technical support. Provided expertise in application customization, troubleshooting, and business process automation. Delivered tailored solutions for financial services industry requirements while ensuring system reliability and performance."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "items": [
+      {
+        "type": "location",
+        "label": "Location",
+        "value": "Grenoble, France"
+      },
+      {
+        "type": "email",
+        "label": "Email",
+        "value": "dimitriuz@gmail.com",
+        "link": "mailto:dimitriuz@gmail.com"
+      },
+      {
+        "type": "phone",
+        "label": "Phone",
+        "value": "+33 6 52 23 25 25",
+        "link": "tel:+33652232525"
+      },
+      {
+        "type": "telegram",
+        "label": "Telegram",
+        "value": "@di_mitrius",
+        "link": "https://t.me/di_mitrius"
+      },
+      {
+        "type": "linkedin",
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/dmitrii-leshchenko",
+        "link": "https://www.linkedin.com/in/dmitrii-leshchenko"
+      },
+      {
+        "type": "github",
+        "label": "GitHub",
+        "value": "github.com/dimitriuz",
+        "link": "https://github.com/dimitriuz"
       }
     ]
   }

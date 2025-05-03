@@ -10,6 +10,7 @@
     "skills": [
       "Technical Leadership & Architecture: System Design / Problem Solving / Project Management / Technical Expertise",
       ".NET: C# / WPF / Avalonia UI / Entity Framework / ASP.NET Core / Serilog / Autofac / MediatR",
+      "Frontend: TypeScript / Vue.js / Nuxt.js / Tailwind CSS / PrimeVue",
       "Databases: MS SQL / PostgreSQL / MariaDB / MongoDB",
       "Integrations: JSON / XML / SOAP / REST / gRPC / RabbitMQ / Robot Framework",
       "DevOps: Docker / Kubernetes (k8s) / Linux / GitLab CI/CD / Proxmox / Nginx",

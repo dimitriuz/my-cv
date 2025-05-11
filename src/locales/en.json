@@ -23,7 +23,7 @@
     "schools": [
       {
         "name": "Moscow University for Industry and Finance",
-        "degree": "Bachelor @ Information Technology",
+        "degree": "Bachelor - Information Technology",
         "period": "2014 - 2016"
       }
     ]
@@ -50,12 +50,34 @@
               "Wrote unit and integration tests using xUnit and Moq"
             ]
           },
-          "Designed and developed a new appointment scheduling application with integration to third-party systems (.NET 8 Avalonia UI)",
-          "Architected and developed a companion web application using .NET 8, ASP.NET Core, and MongoDB",
-          "Analyzed, reverse-engineered, and integrated third-party applications and services using Robot Framework (RPA), databases, REST APIs, and more",
-          "Maintained and optimized CI/CD pipelines using GitLab",
-          "Conducted code reviews, mentored developers, and participated in technical interviews",
-          "Tech stack summary: .NET 7/8, Avalonia UI, xUnit, Moq, Autofac, Serilog, MediatR, Dapper, DynamicData, Fluent*, fo-dicom, gRPC, Hangfire, LiteDB, SQLite, Entity Framework, ONNX, NAPS2, ImageSharp, CommunityToolkit.Mvvm, NAudio, Velopack, ASP.NET Core, MongoDB"
+          {
+            "title": "Designed and developed a new appointment scheduling application with integration to third-party systems (.NET 8 Avalonia UI)",
+            "details": []
+          },
+          {
+            "title": "Architected and developed a companion web application using .NET 8, ASP.NET Core, and MongoDB",
+            "details": []
+          },
+          {
+            "title": "Analyzed, reverse-engineered, and integrated third-party applications and services using Robot Framework (RPA), databases, REST APIs, and more",
+            "details": []
+          },
+          {
+            "title": "Maintained and optimized CI/CD pipelines using GitLab",
+            "details": []
+          },
+          {
+            "title": "Conducted code reviews, mentored developers, and participated in technical interviews",
+            "details": []
+          },
+          {
+            "title": "Tech stack summary",
+            "details": [
+              ".NET 7/8, Avalonia UI, xUnit, Moq, Autofac, Serilog, MediatR, Dapper, DynamicData, Fluent*",
+              "fo-dicom, gRPC, Hangfire, LiteDB, SQLite, Entity Framework, ONNX, NAPS2, ImageSharp",
+              "CommunityToolkit.Mvvm, NAudio, Velopack, ASP.NET Core, MongoDB"
+            ]
+          }
         ]
       },
       {
@@ -99,8 +121,8 @@
       {
         "type": "email",
         "label": "Email",
-        "value": "dimitriuz@gmail.com",
-        "link": "mailto:dimitriuz@gmail.com"
+        "value": "dimitriuz{'@'}gmail.com",
+        "link": "mailto:dimitriuz{'@'}gmail.com"
       },
       {
         "type": "phone",
@@ -111,7 +133,7 @@
       {
         "type": "telegram",
         "label": "Telegram",
-        "value": "@di_mitrius",
+        "value": "{'@'}di_mitrius",
         "link": "https://t.me/di_mitrius"
       },
       {

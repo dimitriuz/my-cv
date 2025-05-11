@@ -1,31 +1,27 @@
 <template>
   <section class="section">
     <h2>{{ t('experience.title') }}</h2>
-
     <div class="section" v-for="(job, index) in tm('experience.jobs')" :key="index">
       <div class="job-header">
         <div class="job-info">
-          <span class="job-company">{{ job.company }}</span>
+          <span class="job-company">{{ $rt(job.company) }}</span>
           <span class="separator">•</span>
-          <span class="job-title">{{ job.title }}</span>
+          <span class="job-title">{{ $rt(job.title) }}</span>
         </div>
-        <span class="job-details">{{ job.period }} | {{ job.location }}</span>
+        <span class="job-details">{{ $rt(job.period) }} | {{ $rt(job.location) }}</span>
       </div>
-      <p v-if="job.description">{{ job.description }}</p>
-      <div class="list-item-container">
+      <p v-if="job.description">{{ $rt(job.description) }}</p>
+      <div v-if="job.responsibilities" class="list-item-container">
         <ul>
           <li v-for="(resp, rIndex) in job.responsibilities" :key="rIndex">
-            <template v-if="typeof resp === 'string'">
-              {{ resp }}
-            </template>
-            <template v-else>
-              {{ resp.title }}
-              <ul v-if="resp.details">
+            <div class="responsibility">
+              <div class="responsibility-title">{{ $rt(resp.title) }}</div>
+              <ul v-if="resp.details && resp.details.length > 0">
                 <li v-for="(detail, dIndex) in resp.details" :key="dIndex">
-                  {{ detail }}
+                  {{ $rt(detail) }}
                 </li>
               </ul>
-            </template>
+            </div>
           </li>
         </ul>
       </div>
@@ -75,5 +71,26 @@ const { t, tm } = useI18n()
 .job-details {
   color: #9CDCFE;
   font-style: italic;
+}
+
+.responsibility {
+  margin-bottom: 8px;
+}
+
+.responsibility-title {
+  color: #9CDCFE;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.responsibility ul {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.responsibility ul li {
+  color: #D4D4D4;
+  font-size: 0.95em;
+  margin-left: 20px;
 }
 </style>

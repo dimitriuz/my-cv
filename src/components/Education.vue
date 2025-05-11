@@ -2,8 +2,8 @@
   <section class="section">
     <h2>{{ t('education.title') }}</h2>
     <div v-for="(school, index) in tm('education.schools')" :key="index">
-      <h3>{{ school.name }}</h3>
-      <p>{{ school.degree }} · ({{ school.period }})</p>
+      <h3>{{ $rt(school.name) }}</h3>
+      <p>{{ $rt(school.degree) }} · ({{ $rt(school.period) }})</p>
     </div>
   </section>
 </template>

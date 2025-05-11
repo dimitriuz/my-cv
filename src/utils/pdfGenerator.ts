@@ -8,6 +8,18 @@ interface PDFGeneratorOptions {
     leftColumnWidth: number;
 }
 
+interface Job {
+    company: string;
+    period: string;
+    location: string;
+    title: string;
+    description?: string;
+    responsibilities?: Array<{
+        title: string;
+        details: string[];
+    }>;
+}
+
 export class PDFGenerator {
     private pdf: jsPDF;
     private i18n: Composer;
@@ -114,79 +126,71 @@ export class PDFGenerator {
         // Left column content
         this.addLeftSection(this.i18n.t('contact.title'), () => {
             (this.i18n.tm('contact.items') as Array<{ label: string; value: string }>).forEach(item => {
-                
                 this.pdf.setFont("helvetica", "bold");
                 this.pdf.setTextColor(156, 220, 254); // #9CDCFE
-                this.addLeftColumnText(`${item.label}:`, 6);
+                this.addLeftColumnText(`${this.i18n.rt(item.label)}:`, 6);
                 
                 this.pdf.setFont("helvetica", "normal");
                 this.pdf.setTextColor(212, 212, 212); // #D4D4D4
-                this.addLeftColumnText(item.value, 6);
+                this.addLeftColumnText(this.i18n.rt(item.value), 6);
             });
-            this.leftY += 5; // Increased from 3
+            this.leftY += 5;
         });
 
         this.addLeftSection(this.i18n.t('summary.skillsTitle'), () => {
             (this.i18n.tm('summary.skills') as string[]).forEach((skill: string) => {
-                this.addLeftColumnText(`• ${skill}`, 3);
+                this.addLeftColumnText(`• ${this.i18n.rt(skill)}`, 3);
             });
-            this.leftY += 5; // Increased from 3
+            this.leftY += 5;
         });
 
         this.addLeftSection(this.i18n.t('education.title'), () => {
-            (this.i18n.tm('education.schools') as Array<{ name: string; degree: string; period: string }>).forEach((school: { name: string; degree: string; period: string }) => {
+            (this.i18n.tm('education.schools') as Array<{ name: string; degree: string; period: string }>).forEach((school) => {
                 this.pdf.setFont("helvetica", "bold");
-                this.addLeftColumnText(school.name);
+                this.addLeftColumnText(this.i18n.rt(school.name));
                 this.pdf.setFont("helvetica", "normal");
-                this.addLeftColumnText(`${school.degree}`);
-                this.addLeftColumnText(`(${school.period})`);
-                this.leftY += 3; // Increased from 2
+                this.addLeftColumnText(this.i18n.rt(school.degree));
+                this.addLeftColumnText(`(${this.i18n.rt(school.period)})`);
+                this.leftY += 3;
             });
         });
 
         // Right column content
         this.addRightSection(this.i18n.t('experience.title'), () => {
-            (this.i18n.tm('experience.jobs') as Array<{
-                company: string;
-                period: string;
-                location: string;
-                title: string;
-                description?: string;
-                responsibilities?: Array<string | { title: string; details?: string[] }>;
-            }>).forEach(job => {
+            (this.i18n.tm('experience.jobs') as Job[]).forEach(job => {
                 const startX = this.options.margin * 2 + this.options.leftColumnWidth;
                 
                 this.pdf.setFont("helvetica", "bold");
                 this.pdf.setTextColor(86, 156, 214); // #569CD6 for company name
-                this.pdf.text(job.company, startX, this.rightY);
+                this.pdf.text(this.i18n.rt(job.company), startX, this.rightY);
                 
                 this.pdf.setFont("helvetica", "italic");
                 this.pdf.setTextColor(156, 220, 254); // #9CDCFE for period
-                const periodText = `${job.period} | ${job.location}`;
+                const periodText = `${this.i18n.rt(job.period)} | ${this.i18n.rt(job.location)}`;
                 this.pdf.text(periodText, startX + this.rightColumnWidth, this.rightY, { align: "right" });
                 this.rightY += 4;
 
                 this.pdf.setFont("helvetica", "normal");
                 this.pdf.setTextColor(78, 201, 176); // #4EC9B0 for job title
-                this.pdf.text(job.title, startX, this.rightY);
+                this.pdf.text(this.i18n.rt(job.title), startX, this.rightY);
                 this.rightY += 4;
 
                 this.pdf.setTextColor(212, 212, 212); // Reset to default text color
                 if (job.description) {
-                    this.addRightColumnText(job.description, 3);
+                    this.addRightColumnText(this.i18n.rt(job.description), 3);
                     this.rightY += 2;
                 }
+
                 if (job.responsibilities) {
                     job.responsibilities.forEach(resp => {
-                        if (typeof resp === 'string') {
-                            this.addRightColumnText(`• ${resp}`, 3);
-                        } else {
-                            this.addRightColumnText(`• ${resp.title}`, 3);
-                            // if (resp.details) {
-                            //     resp.details.forEach(detail => {
-                            //         this.addRightColumnText(`  - ${detail}`, 6);
-                            //     });
-                            // }
+                        // Add responsibility title
+                        this.addRightColumnText(`• ${this.i18n.rt(resp.title)}`, 3);
+                        
+                        // Add details if they exist
+                        if (resp.details && resp.details.length > 0) {
+                            resp.details.forEach(detail => {
+                                this.addRightColumnText(`  - ${this.i18n.rt(detail)}`, 6);
+                            });
                         }
                     });
                 }

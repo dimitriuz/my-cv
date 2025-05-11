@@ -6,7 +6,7 @@
     <div class="list-item-container">
     <ul>
       <li v-for="(skill, index) in tm('summary.skills')" :key="index">
-        {{ skill }}
+        {{ $rt(skill) }}
       </li>
     </ul>
     </div>

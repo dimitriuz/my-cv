@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+
+import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import Summary from './components/Summary.vue';
 import Experience from './components/Experience.vue';
@@ -8,19 +9,23 @@ import Contact from './components/Contact.vue';
 import { PDFGenerator } from './utils/pdfGenerator';
 
 const i18n = useI18n();
-const container = ref(null);
+
+const container = ref<HTMLElement | null>(null);
 
 const generatePDF = () => {
     const generator = new PDFGenerator(i18n);
     generator.generate();
 };
+
+onMounted(async () => {
+});
 </script>
 
 <template>
     <div class="container" ref="container">
         <header>
-            <h1>{{ i18n.t('header.name') }}</h1>
-            <p>{{ i18n.t('header.title') }}</p>
+            <h1>{{ $t("header.name") }}</h1>
+            <p>{{ $t("header.title") }}</p>
         </header>
 
         <button @click="generatePDF">Download CV</button>

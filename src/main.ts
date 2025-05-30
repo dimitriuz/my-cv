@@ -2,15 +2,17 @@ import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
 import './style.css'
 import App from './App.vue'
+import en from './locales/en.json'
+import fr from './locales/fr.json'
 
-import messages from "@intlify/unplugin-vue-i18n/messages";
 const i18n = createI18n({
   legacy: false,
-  globalInjection: true,
-  locale: 'en',
-  // fallbackLocale: "en",
-  // availableLocales: ["en"],
-  messages:  messages
+  locale: 'en', // default locale
+  fallbackLocale: 'en',
+  messages: {
+    en,
+    fr
+  }
 })
 
 const app = createApp(App)

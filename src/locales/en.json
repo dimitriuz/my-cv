@@ -1,7 +1,7 @@
 {
   "header": {
     "name": "Dmitrii Leshchenko",
-    "title": ".NET Senior Software Developer | France"
+    "title": "Team Lead / .NET Senior Software Developer | France"
   },
   "summary": {
     "title": "Summary",
@@ -36,56 +36,26 @@
         "title": "Team Lead / .NET Senior Software Developer",
         "period": "June 2023 - Present",
         "location": "United States (remote)",
-        "description": "Lead the architecture and development of a modern, multi-platform desktop application for an AI-powered cloud medical platform.",
-        "responsibilities": [
-          {
-            "title": "Development of a modern multi-platform desktop application based on .NET 8 Avalonia UI",
-            "details": [
+        "description": "Lead the architecture and development of a modern, multi-platform desktop applications for an AI-powered cloud medical platform.",
+        "details": [
               "Implemented high-speed, multithreaded processing and uploading of 2D/3D medical images",
               "Architected and developed plug-ins for third-party medical software (official and unsupported)",
-              "Built logging, metrics, and configuration management modules",
-              "Developed application installation and update modules",
+              "Built infrastructure - logging, metrics, configuration, installation and update modules",
               "Re-architected the application from monolithic to client-server architecture using gRPC",
-              "Performed performance analysis and troubleshooting",
-              "Wrote unit and integration tests using xUnit and Moq"
+              "Performance analysis and troubleshooting",
+              "Wrote unit and integration tests using xUnit",
+              "Architected and developed a companion web application using .NET 8, ASP.NET Core, and MongoDB",
+              "Maintained and optimized CI/CD pipelines using GitLab",
+              "Conducted code reviews, mentored developers, and participated in technical interviews",
+              "Tech stack: .NET 8, Avalonia UI, gRPC, Autofac, Serilog, MediatR, Dapper, DynamicData, Fluent*, fo-dicom, EFCore, ONNX, CommunityToolkit.Mvvm, NAudio, ASP.NET Core, MongoDB, PostgreSQL, xUnit"
             ]
-          },
-          {
-            "title": "Designed and developed a new appointment scheduling application with integration to third-party systems (.NET 8 Avalonia UI)",
-            "details": []
-          },
-          {
-            "title": "Architected and developed a companion web application using .NET 8, ASP.NET Core, and MongoDB",
-            "details": []
-          },
-          {
-            "title": "Analyzed, reverse-engineered, and integrated third-party applications and services using Robot Framework (RPA), databases, REST APIs, and more",
-            "details": []
-          },
-          {
-            "title": "Maintained and optimized CI/CD pipelines using GitLab",
-            "details": []
-          },
-          {
-            "title": "Conducted code reviews, mentored developers, and participated in technical interviews",
-            "details": []
-          },
-          {
-            "title": "Tech stack summary",
-            "details": [
-              ".NET 7/8, Avalonia UI, xUnit, Moq, Autofac, Serilog, MediatR, Dapper, DynamicData, Fluent*",
-              "fo-dicom, gRPC, Hangfire, LiteDB, SQLite, Entity Framework, ONNX, NAPS2, ImageSharp",
-              "CommunityToolkit.Mvvm, NAudio, Velopack, ASP.NET Core, MongoDB"
-            ]
-          }
-        ]
       },
       {
         "company": "FirstBIT",
         "title": "Senior Software Developer / Team Lead",
         "period": "November 2019 - June 2023",
         "location": "Russia",
-        "description": "Led development teams of 3-17 members as technical architect and team lead. Designed and developed scalable application architectures, focusing on performance optimization and timely project delivery. Created enterprise integrations between various systems using REST, SOAP, OData, SQL, RabbitMQ, XML, and JSON, connecting applications like 1C, SAP, and DAX. Specialized in SQL performance optimization and database efficiency improvements."
+        "description": "Led development teams (3-15 members) as technical architect and team lead on ERP and enterprise software implementation (digital transformation) projects for major manufacturing clients. Oversaw solution architecture and delivery, ensuring scalable, high-performance integrations between systems. Specialized in SQL performance optimization and database efficiency."
       },
       {
         "company": "Self-employed",
@@ -99,7 +69,7 @@
         "title": "Team Lead, Senior Software Development Engineer",
         "period": "2008 - 2016",
         "location": "Russia",
-        "description": "Managed full lifecycle of ERP-class corporate software implementation and development. Successfully integrated diverse systems including ACMS, CAD, MES, vending machines, dashboards, and Telegram bots to create a unified enterprise ecosystem. Led development teams and maintained system stability while implementing continuous improvements and optimizations."
+        "description": "Managed full lifecycle of ERP-class corporate software implementation and development. Successfully integrated diverse systems including ACMS, CAD, MES, vending machines, dashboards, and Telegram bots to create a unified enterprise ecosystem. Led development team and maintained system stability while implementing continuous improvements and optimizations."
       },
       {
         "company": "FinInvest Service",

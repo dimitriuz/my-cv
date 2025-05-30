@@ -7,6 +7,7 @@ import Experience from './components/Experience.vue';
 import Education from './components/Education.vue';
 import Contact from './components/Contact.vue';
 import { PDFGenerator } from './utils/pdfGenerator';
+import LanguageSwitcher from './components/LanguageSwitcher.vue';
 
 const i18n = useI18n();
 
@@ -23,6 +24,7 @@ onMounted(async () => {
 
 <template>
     <div class="container" ref="container">
+        <LanguageSwitcher />
         <header>
             <h1>{{ $t("header.name") }}</h1>
             <p>{{ $t("header.title") }}</p>

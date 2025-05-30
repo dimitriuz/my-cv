@@ -1,0 +1,123 @@
+{
+  "header": {
+    "name": "Dmitrii Leshchenko",
+    "title": "Chef d'équipe / Développeur Senior .NET | France"
+  },
+  "summary": {
+    "title": "Résumé",
+    "intro": "Développeur Senior .NET avec plus de 15 ans d'expérience dans la conception, l'architecture et le développement de solutions logicielles complexes pour les plateformes desktop, web et cloud. Expertise avérée dans la traduction des besoins métier en architectures évolutives, la direction d'équipes de développement et l'excellence technique dans les plateformes médicales basées sur l'IA, les systèmes ERP d'entreprise, CRM et d'intégration. Compétent en technologies .NET modernes, microservices et applications multithreads haute performance. Expert en mentorat d'équipes, optimisation des pipelines CI/CD et revues de code approfondies.",
+    "skillsTitle": "Compétences",
+    "skills": [
+      "Leadership Technique & Architecture: Conception de Systèmes / Résolution de Problèmes / Gestion de Projets / Expertise Technique / Rétro-ingénierie",
+      ".NET: C# / WPF / Avalonia UI / Entity Framework / ASP.NET Core / Serilog / Autofac / MediatR",
+      "Frontend: TypeScript / Vue.js / Nuxt.js / Tailwind CSS / PrimeVue",
+      "Bases de données: MS SQL / PostgreSQL / MariaDB / MongoDB",
+      "Intégrations: JSON / XML / SOAP / REST / gRPC / RabbitMQ / Robot Framework",
+      "DevOps: Docker / Kubernetes (k8s) / Linux / GitLab CI/CD / Proxmox / Nginx",
+      "Tests: Tests Unitaires / Tests d'Intégration / Tests E2E / xUnit / Moq",
+      "Outils: Git / Jira / Confluence / Grafana"
+    ]
+  },
+  "education": {
+    "title": "Formation",
+    "schools": [
+      {
+        "name": "Université de l'Industrie et de la Finance de Moscou",
+        "degree": "Licence en Informatique",
+        "period": "2014 - 2016"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Expérience Professionnelle",
+    "jobs": [
+      {
+        "company": "Diagnocat",
+        "title": "Chef d'équipe / Développeur Senior .NET",
+        "period": "Juin 2023 - Présent",
+        "location": "États-Unis (télétravail)",
+        "description": "Direction de l'architecture et du développement d'applications desktop multi-plateformes pour une plateforme médicale cloud basée sur l'IA.",
+        "details": [
+          "Implémentation du traitement et du téléchargement haute vitesse d'images médicales 2D/3D en multithread",
+          "Architecture et développement de plug-ins pour logiciels médicaux tiers",
+          "Construction d'infrastructure - journalisation, métriques, configuration, modules d'installation et de mise à jour",
+          "Réarchitecture de l'application d'une architecture monolithique vers une architecture client-serveur utilisant gRPC",
+          "Analyse et résolution des problèmes de performance",
+          "Écriture de tests unitaires et d'intégration avec xUnit",
+          "Architecture et développement d'une application web complémentaire utilisant .NET 8, ASP.NET Core et MongoDB",
+          "Maintenance et optimisation des pipelines CI/CD avec GitLab",
+          "Revues de code, mentorat des développeurs et participation aux entretiens techniques",
+          "Stack technique: .NET 8, Avalonia UI, gRPC, Autofac, Serilog, MediatR, Dapper, DynamicData, Fluent*, fo-dicom, EFCore, ONNX, CommunityToolkit.Mvvm, NAudio, ASP.NET Core, MongoDB, PostgreSQL, xUnit"
+        ]
+      },
+      {
+        "company": "FirstBIT",
+        "title": "Développeur Senior / Chef d'Équipe",
+        "period": "Novembre 2019 - Juin 2023",
+        "location": "Russie",
+        "description": "Direction d'équipes de développement (3-15 membres) en tant qu'architecte technique et chef d'équipe sur des projets d'implémentation de logiciels d'entreprise ERP (transformation digitale) pour des clients industriels majeurs. Supervision de l'architecture de solutions et de la livraison, garantissant des intégrations évolutives et performantes entre les systèmes. Spécialisé dans l'optimisation des performances SQL et l'efficacité des bases de données."
+      },
+      {
+        "company": "Indépendant",
+        "title": "Ingénieur en Développement Logiciel",
+        "period": "Novembre 2016 - Novembre 2019",
+        "location": "Russie",
+        "description": "Livraison de solutions logicielles complètes dans différents domaines. Développement d'intégrations complexes entre SharePoint, Project Server et les systèmes d'entreprise 1C. Construction de solutions ERP personnalisées pour les entreprises de services pétroliers et manufacturières, implémentant des exigences spécifiques à l'industrie et optimisant les processus métier via des applications web et desktop."
+      },
+      {
+        "company": "SPF Paker LLC",
+        "title": "Chef d'Équipe, Ingénieur Senior en Développement Logiciel",
+        "period": "2008 - 2016",
+        "location": "Russie",
+        "description": "Gestion du cycle de vie complet de l'implémentation et du développement de logiciels d'entreprise ERP. Intégration réussie de systèmes variés incluant ACMS, CAD, MES, machines de vente, tableaux de bord et bots Telegram pour créer un écosystème d'entreprise unifié. Direction d'équipes de développement et maintien de la stabilité du système tout en implémentant des améliorations et optimisations continues."
+      },
+      {
+        "company": "FinInvest Service",
+        "title": "Ingénieur en Développement Logiciel",
+        "period": "2007 - 2008",
+        "location": "Russie",
+        "description": "Spécialisé dans le développement sur la plateforme 1C:Enterprise et le support technique. Expertise en personnalisation d'applications, résolution de problèmes et automatisation des processus métier. Livraison de solutions adaptées aux exigences de l'industrie des services financiers tout en assurant la fiabilité et la performance du système."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "items": [
+      {
+        "type": "location",
+        "label": "Localisation",
+        "value": "Grenoble, France"
+      },
+      {
+        "type": "email",
+        "label": "Email",
+        "value": "dimitriuz{'@'}gmail.com",
+        "link": "mailto:dimitriuz{'@'}gmail.com"
+      },
+      {
+        "type": "phone",
+        "label": "Téléphone",
+        "value": "+33 6 52 23 25 25",
+        "link": "tel:+33652232525"
+      },
+      {
+        "type": "telegram",
+        "label": "Telegram",
+        "value": "{'@'}di_mitrius",
+        "link": "https://t.me/di_mitrius"
+      },
+      {
+        "type": "linkedin",
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/dmitrii-leshchenko",
+        "link": "https://www.linkedin.com/in/dmitrii-leshchenko"
+      },
+      {
+        "type": "github",
+        "label": "GitHub",
+        "value": "github.com/dimitriuz",
+        "link": "https://github.com/dimitriuz"
+      }
+    ]
+  }
+}

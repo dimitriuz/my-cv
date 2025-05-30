@@ -11,17 +11,10 @@
         <span class="job-details">{{ $rt(job.period) }} | {{ $rt(job.location) }}</span>
       </div>
       <p v-if="job.description">{{ $rt(job.description) }}</p>
-      <div v-if="job.responsibilities" class="list-item-container">
+      <div v-if="job.details" class="list-item-container">
         <ul>
-          <li v-for="(resp, rIndex) in job.responsibilities" :key="rIndex">
-            <div class="responsibility">
-              <div class="responsibility-title">{{ $rt(resp.title) }}</div>
-              <ul v-if="resp.details && resp.details.length > 0">
-                <li v-for="(detail, dIndex) in resp.details" :key="dIndex">
-                  {{ $rt(detail) }}
-                </li>
-              </ul>
-            </div>
+          <li v-for="(detail, index) in job.details" :key="index">
+            {{ $rt(detail) }}
           </li>
         </ul>
       </div>
@@ -92,5 +85,18 @@ const { t, tm } = useI18n()
   color: #D4D4D4;
   font-size: 0.95em;
   margin-left: 20px;
+}
+
+.list-item-container ul {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  list-style-type: disc;
+}
+
+.list-item-container ul li {
+  color: #D4D4D4;
+  font-size: 0.95em;
+  margin-left: 20px;
+  margin-bottom: 4px;
 }
 </style>

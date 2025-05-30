@@ -14,10 +14,7 @@ interface Job {
     location: string;
     title: string;
     description?: string;
-    responsibilities?: Array<{
-        title: string;
-        details: string[];
-    }>;
+    details?: string[];
 }
 
 export class PDFGenerator {
@@ -31,7 +28,7 @@ export class PDFGenerator {
     constructor(i18n: Composer, options?: Partial<PDFGeneratorOptions>) {
         this.i18n = i18n;
         this.options = {
-            margin: 15,
+            margin: 10,
             pageWidth: 210,
             pageHeight: 297,
             leftColumnWidth: 65,
@@ -121,6 +118,8 @@ export class PDFGenerator {
     }
 
     public generate(): void {
+        const filename = 'Dmitrii_Leshchenko_CV.pdf';
+        
         this.addHeader();
 
         // Left column content
@@ -159,7 +158,6 @@ export class PDFGenerator {
         this.addRightSection(this.i18n.t('experience.title'), () => {
             (this.i18n.tm('experience.jobs') as Job[]).forEach(job => {
                 const startX = this.options.margin * 2 + this.options.leftColumnWidth;
-                
                 this.pdf.setFont("helvetica", "bold");
                 this.pdf.setTextColor(86, 156, 214); // #569CD6 for company name
                 this.pdf.text(this.i18n.rt(job.company), startX, this.rightY);
@@ -181,23 +179,17 @@ export class PDFGenerator {
                     this.rightY += 2;
                 }
 
-                if (job.responsibilities) {
-                    job.responsibilities.forEach(resp => {
-                        // Add responsibility title
-                        this.addRightColumnText(`• ${this.i18n.rt(resp.title)}`, 3);
-                        
-                        // Add details if they exist
-                        if (resp.details && resp.details.length > 0) {
-                            resp.details.forEach(detail => {
-                                this.addRightColumnText(`  - ${this.i18n.rt(detail)}`, 6);
-                            });
-                        }
+                if (job.details && job.details.length > 0) {
+                    job.details.forEach(detail => {
+                        this.addRightColumnText(`• ${this.i18n.rt(detail)}`, 3);
                     });
+                    this.rightY += 2;
                 }
-                this.rightY += 4;
+
+                this.rightY += 4; // Add space between jobs
             });
         });
 
-        this.pdf.save('Dmitrii_Leshchenko_CV.pdf');
+        this.pdf.save(filename);
     }
 }

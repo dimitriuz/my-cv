@@ -1,0 +1,34 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build
+        run: npm run build
+      
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          SOURCE: "dist/"
+          TARGET: "/var/www/html/my-cv"
+          EXCLUDE: "/.git/, /.github/, /node_modules/"

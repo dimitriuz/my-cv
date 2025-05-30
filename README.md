@@ -103,6 +103,39 @@ export default defineConfig({
 
 2. Deploy using GitHub Actions (workflow included in repository)
 
+#### Using GitLab Pages
+
+1. The repository includes a GitLab CI/CD configuration that will automatically:
+   - Install dependencies
+   - Build the project
+   - Create production-ready files in the `dist` directory
+
+2. Update `vite.config.ts` with your base URL:
+```typescript
+export default defineConfig({
+    base: '/my-cv/',
+    // ...other config
+})
+```
+
+3. To deploy to GitLab Pages, update the `.gitlab-ci.yml` file to include the pages job:
+
+```yaml
+pages:
+  stage: deploy
+  script:
+    - npm ci
+    - npm run build
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+```
+
+Your CV will be available at `https://username.gitlab.io/my-cv`
+
 ## Customization
 
 To customize the CV content, modify the JSON files in `src/locales/`:

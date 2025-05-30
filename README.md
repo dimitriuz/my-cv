@@ -93,7 +93,11 @@ server {
 
 #### Using GitHub Pages
 
-1. Update `vite.config.ts` with your base URL:
+1. Enable GitHub Pages in your repository settings:
+   - Go to Settings > Pages
+   - Set Source to "GitHub Actions"
+
+2. Update `vite.config.ts` with your base URL:
 ```typescript
 export default defineConfig({
     base: '/my-cv/',
@@ -101,7 +105,12 @@ export default defineConfig({
 })
 ```
 
-2. Deploy using GitHub Actions (workflow included in repository)
+3. Push your changes to the main branch. The GitHub Action will automatically:
+   - Install dependencies
+   - Build the project
+   - Deploy to GitHub Pages
+
+Your CV will be available at `https://username.github.io/my-cv`
 
 #### Using GitLab Pages
 

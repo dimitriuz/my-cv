@@ -20,6 +20,7 @@ const currentLocale = computed(() => locale.value)
 
 const switchLanguage = (lang: string) => {
   locale.value = lang
+  localStorage.setItem('user-language', lang)
 }
 </script>
 

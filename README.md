@@ -10,6 +10,8 @@ A modern, interactive CV built with Vue 3, TypeScript, and Vite. Features both w
 - 📄 PDF export with custom formatting
 - 🎯 Interactive web interface
 - 💼 Organized content structure using JSON
+- 🌐 Automatic language detection based on user's browser settings
+- 💾 Language preference persistence
 
 ## Tech Stack
 

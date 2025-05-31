@@ -6,7 +6,7 @@ import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
-  base: command === 'serve' ? '/' : '/my-cv/',
+  base: '/' 
   plugins: [vue(),
     VueI18nPlugin({
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**'),

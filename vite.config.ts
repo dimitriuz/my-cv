@@ -5,7 +5,7 @@ import { resolve, dirname } from "node:path";
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
 
 // https://vite.dev/config/
-export default defineConfig(({ command }) => ({
+export default defineConfig(({  }) => ({
   base: '/', 
   plugins: [vue(),
     VueI18nPlugin({
